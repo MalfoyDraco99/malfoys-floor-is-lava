@@ -1,0 +1,8 @@
+name: MalfoysFloorIsLava
+version: '${version}'
+
+main: me.malfoy.malfoysFloorIsLava.MalfoysFloorIsLava
+api-version: '26.2'
+load: POSTWORLD
+
+authors: [ malfoy ]
