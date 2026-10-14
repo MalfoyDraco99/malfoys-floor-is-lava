@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class MalfoysFloorIsLava extends JavaPlugin {
     private static MalfoysFloorIsLava instance;
     public boolean enabled = false;
-    public String type = "tnt"; // should be tnt or lava
+    public String type = "tnt"; // should be tnt, lava or sand
     @Override
     public void onEnable() {
         getLogger().info("MalfoysFloorIsLava is loaded.");

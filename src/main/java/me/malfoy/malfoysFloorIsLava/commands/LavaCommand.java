@@ -57,6 +57,17 @@ public class LavaCommand {
                                     MalfoysFloorIsLava.getInstance().type = "tnt";
                                     player.sendMessage(Component.text("Type has been set to tnt", NamedTextColor.GREEN));
                                     return 1;
+                                }))
+                        .then(Commands.literal("sand")
+                                .executes(context -> {
+                                    var source = context.getSource();
+                                    if (!(source.getExecutor() instanceof Player player)){
+                                        source.getSender().sendMessage(Component.text("Only a player can run this command", NamedTextColor.RED));
+                                        return 0;
+                                    }
+                                    MalfoysFloorIsLava.getInstance().type = "sand";
+                                    player.sendMessage(Component.text("Type has been set to sand", NamedTextColor.GREEN));
+                                    return 1;
                                 })))
                 .build();
     }
