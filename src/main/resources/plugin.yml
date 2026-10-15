@@ -4,5 +4,9 @@ version: '${version}'
 main: me.malfoy.malfoysFloorIsLava.MalfoysFloorIsLava
 api-version: '26.2'
 load: POSTWORLD
+permissons:
+  floorislava.admin:
+    description: Allows use of all floorislava commands.
+    default: op
 
 authors: [ malfoy ]

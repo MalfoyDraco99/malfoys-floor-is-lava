@@ -13,6 +13,9 @@ import org.bukkit.entity.Player;
 public class LavaCommand {
     public static LiteralCommandNode<CommandSourceStack> create(){
         return Commands.literal("lava")
+                .requires(sourceStack -> {
+                    return sourceStack.getSender().hasPermission("floorislava.admin");
+                })
                 .then(Commands.literal("enable")
                         .executes(context -> {
                             var source = context.getSource();
